@@ -1,0 +1,15 @@
+.main-box {
+  width: 300px;
+  height: 300px;
+}
+.main-box .main-box {
+  background-color: green;
+}
+
+.sub-box {
+  width: 100px;
+  height: 100px;
+}
+.sub-box .main-box {
+  background-color: blue;
+}

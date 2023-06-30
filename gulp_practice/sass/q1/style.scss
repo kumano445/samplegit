@@ -1,0 +1,28 @@
+@mixin boxContent($value) {
+  width: $value;
+  height: $value;
+
+  @if $value < 100px {
+    .main-box {
+      background-color: red;
+    }
+  }
+  @else if $value < 200px {
+    .main-box {
+      background-color: blue;
+    }
+  }
+  @else {
+    .main-box {
+      background-color: green;
+    }
+  }
+}
+
+.main-box {
+  @include boxContent(300px);
+}
+
+.sub-box {
+  @include boxContent(100px);
+}

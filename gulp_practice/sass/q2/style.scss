@@ -1,0 +1,17 @@
+@import "common";
+
+$map: (
+  "line": #00B900,
+  "instagram": #CF2E92,
+  "facebook": #71d0f2,
+  "twitter": #1DA1F2,
+);
+
+@each $key, $value in $map {
+  .content__sns__btn.is-#{$key} {
+    @include btn($value);
+  }
+}
+.content__sns__btn{
+  margin: 10px;
+}
