@@ -1,0 +1,441 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.4rem;
+  line-height: 2.5;
+  font-family: 'Poppins','helvetica Neue','Hiragino Kaku Gothic Pro','Yu Gothic';
+  color: #333333;
+  letter-spacing: .1em;
+  line-height: 2.5;
+}
+img{
+  vertical-align: bottom;
+}
+a{
+  text-decoration: none;
+  color: #000000;
+  line-height: 20px;
+  letter-spacing: 5px;
+  font-size: 13px;
+}
+.bg_gray{
+  background-color: #fafafa;
+}
+.br_sp{
+  display: none;
+}
+.inner{
+  width: 100%;
+  overflow: hidden;
+}
+/* header */
+.header-container{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.logo_area{
+  display: flex;
+  margin-left: 120px;
+  margin-top: 30px;
+}
+.a{
+  color: inherit;
+  cursor: pointer;
+}
+.h1{
+  font-family: 'Damion', cursive;
+  line-height: 97px;
+  font-size: 40px;
+}
+.nav-area ul{
+  display: flex;
+  font-size: 20px;
+  margin-right: 120px;
+  margin-top: 30px;
+}
+.nav li{
+  margin-left: 25px;
+}
+ /* ーーーーハンバーガーメニューーーーー */
+ .zdo_drawer_button * {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  font: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: left;
+  text-decoration: none;
+  list-style: none;
+}
+
+.zdo_drawer_button {
+  display: block;
+  padding: 0;
+  width: 0px;
+  height: 14px;
+  position: relative;
+  background: none;
+  border: none;
+  text-align: center;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  outline: none;
+}
+
+.zdo_drawer_button .zdo_drawer_bar {
+  display: block;
+  width: 22px;
+  height: 1.4px;
+  transition: all 0.2s;
+  transform-origin: 0% 0%;
+  transform: translateY(-50%);
+  position: absolute;
+  left: 0;
+}
+
+.zdo_drawer_button .zdo_drawer_bar1 {
+  top: 0;
+}
+
+.zdo_drawer_button .zdo_drawer_bar2 {
+  top: 50%;
+}
+
+.zdo_drawer_button .zdo_drawer_bar3 {
+  top: 100%;
+}
+
+.zdo_drawer_button.active .zdo_drawer_bar {
+  width: 20px;
+  left: 8px;
+}
+
+.zdo_drawer_button.active .zdo_drawer_bar1 {
+  transform: rotate(0.7853981634rad) translateY(-50%);
+  top: 0px;
+}
+
+.zdo_drawer_button.active .zdo_drawer_bar2 {
+  opacity: 0;
+}
+
+.zdo_drawer_button.active .zdo_drawer_bar3 {
+  transform: rotate(-0.7853981634rad) translateY(-50%);
+  top: calc(100% - 0px);
+}
+
+.zdo_drawer_button.active .zdo_drawer_menu_text {
+  display: none;
+}
+
+.zdo_drawer_button.active .zdo_drawer_close {
+  display: block;
+}
+
+.zdo_drawer_text {
+  width: 100%;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  text-align: center;
+  font-size: 10px;
+}
+
+.zdo_drawer_close {
+  letter-spacing: 0.08em;
+  display: none;
+}
+
+/*+++ Default Button Color +++*/
+.zdo_drawer_button {
+  color: #111111;
+}
+
+.zdo_drawer_button .zdo_drawer_bar {
+  background-color: #111111;
+}
+
+/* === Hambuerger Button's Style End === */
+.zdo_drawer_menu .zdo_drawer_button {
+  /*+++ Hamburger Button Position +++*/
+  position: fixed;
+  top: 25px;
+  right: 60px;
+  z-index: 1001;
+}
+.zdo_drawer_menu a {
+  color: inherit;
+  text-decoration: none;
+}
+.zdo_drawer_menu a:visited {
+  color: inherit;
+}
+.zdo_drawer_menu .zdo_drawer_bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 999;
+  background-color: rgba(51, 51, 51, 0.5);
+  display: none;
+  top: 0;
+  left: 0;
+}
+.zdo_drawer_menu .zdo_drawer_nav_wrapper {
+  width: 312px;
+  height: 100%;
+  transition: all 0.2s;
+  transform: translate(312px);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #FFF;
+}
+.zdo_drawer_menu .zdo_drawer_nav_wrapper.open {
+  transform: translate(0);
+}
+.zdo_drawer_menu.left .zdo_drawer_button {
+  right: auto;
+  left: 32px;
+}
+.zdo_drawer_menu.left .zdo_drawer_nav_wrapper {
+  transform: translate(-312px);
+  right: auto;
+  left: 0;
+}
+.zdo_drawer_menu.left .zdo_drawer_nav_wrapper.open {
+  transform: translate(0);
+}
+
+/*+++ Default Navigation CSS +++*/
+.zdo_drawer_menu .zdo_drawer_nav {
+  padding: 112px 24px;
+}
+.zdo_drawer_menu .zdo_drawer_nav li {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 760px) {
+  .zdo_drawer_menu {
+    display: none;
+  }
+}
+/* top */
+.top_img{
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+.site_link{
+  text-decoration: underline;
+  transition: .4s;
+  color: #333333;
+}
+/* gaiyou */
+.container{
+  width: 720px;
+  margin: 60px auto;
+}
+.container_title{
+  line-height: 2.8;
+}
+.item{
+  width: 580px;
+  margin: 30px auto;
+  background-color: #fafafa;
+  display: flex;
+  flex-wrap: wrap;
+}
+.item dl{
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 6px;
+  padding-top: 20px;
+}
+.item_dt{
+  width: 20%;
+  margin-bottom: 16px;
+}
+.item_dd{
+  width: 75%;
+  font-size: 13px;
+}
+/* box1 */
+.box1{
+  width: 720px;
+  margin: 0 auto;
+}
+.spacer{
+  width: 100%;
+  height: 50px;
+}
+.btn{
+  text-align: right;
+  margin-top: 20px;
+}
+.btn_more{
+  border-bottom: #111111 1px solid;
+  padding-bottom: 6px;
+  transition: .4s;
+    transition-property: all;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+/* footer */
+.footer{
+  width: 720px;
+  height: 80px;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bg_gray{
+  width: 100%;
+}
+.privacyPolicy{
+  font-size: 1.2rem;
+  letter-spacing: .02em;
+}
+.copy{
+  margin-left: 360px;
+}
+.fnav{
+  display: flex;
+  margin-right: 360px;
+}
+.fnav li{
+  margin-left: 25px;
+  font-size: 1.5rem;
+  transition: .4s;
+    transition-property: all;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+
+/* ------------sp------------ */
+@media screen and (max-width: 759px) {
+  body{
+    font-size: 1.3rem;
+  }
+}
+
+/* -----------header---------- */
+@media screen and (max-width: 759px) {
+  #header {
+    height: 60px;
+    width: 100%;
+  }
+  .header-container {
+    width: 90%;
+    height: 60px;
+  }
+  .logo_area {
+    margin-left: 18px;
+    margin-top: 5px;
+  }
+  .h1{
+    font-size: 1.2rem;
+    padding-top: 4px;
+    line-height: 1.6;
+  }
+  .nav-area {
+    display: none;
+  }
+}
+@media screen and (min-width:768px) and ( max-width:1024px) {
+  .logo_area{
+    margin-left: 30px;
+  }
+  .nav-area ul{
+    margin-right: 30px;
+  }
+}
+/* ---------top--------- */
+@media screen and (max-width: 759px) {
+  .top_img{
+    margin: 0 auto;
+  }
+  .top_img img{
+    width: 92%;
+  }
+}
+
+/* --------gaiyou-------- */
+@media screen and (max-width: 759px) {
+  .container{
+    width: 90%;
+    margin: 30px auto;
+  }
+  .item{
+    width: 98%;
+  }
+  .kikan{
+    margin-bottom: 30px;
+  }
+  .item_dt{
+    margin-bottom: 30px;
+  }
+}
+/* ----------target------- */
+@media screen and (max-width: 759px) {
+  .box1{
+    width: 90%;
+    margin: 30px auto;
+  }
+}
+@media screen and (min-width:768px) and ( max-width:1024px) {
+  .btn{
+  margin-bottom: 20px;
+}
+}
+/* -----process---- */
+@media screen and (max-width: 759px) {
+  .btn{
+    width: 100%;
+    margin-top: 4px;
+  }
+}
+/* -------footer--------- */
+@media screen and (max-width: 759px) {
+.footer{
+  width: 100%;
+  display: block;
+  margin-top: 20px;
+}
+.copy{
+  margin: 0 auto;
+  padding-top: 10px;
+}
+.fnav_area{
+  width: 240px;
+  margin: 0 auto;
+}
+.fnav li:first-child{
+  margin-left: 0;
+}
+}
+@media screen and (min-width:768px) and ( max-width:1024px) {
+  .copy{
+    margin-left: 30px;
+  }
+  .fnav{
+    margin-right: 30px;
+  }
+}
